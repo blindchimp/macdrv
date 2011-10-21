@@ -22,7 +22,6 @@
 		B4E60D8410E16C5E00AC10DF /* MacDwycoVideoSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = B4E60D7B10E16C5E00AC10DF /* MacDwycoVideoSource.mm */; };
 		B4E60D8510E16C5E00AC10DF /* MacDwycoVideoSourceDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E60D7C10E16C5E00AC10DF /* MacDwycoVideoSourceDelegate.h */; };
 		B4E60D8710E16C7100AC10DF /* MacAudioPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E60D8610E16C7100AC10DF /* MacAudioPacket.h */; };
-		B4E60D9010E16D8500AC10DF /* vidaq.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E60D8F10E16D8500AC10DF /* vidaq.h */; };
 		B4E60D9310E16DC900AC10DF /* vidskel.h in Headers */ = {isa = PBXBuildFile; fileRef = B4E60D9210E16DC900AC10DF /* vidskel.h */; };
 		D2AAC088055469A000DB518D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
@@ -47,7 +46,6 @@
 		B4E60D7B10E16C5E00AC10DF /* MacDwycoVideoSource.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = MacDwycoVideoSource.mm; path = ../MacDwycoVideoSource.mm; sourceTree = SOURCE_ROOT; };
 		B4E60D7C10E16C5E00AC10DF /* MacDwycoVideoSourceDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacDwycoVideoSourceDelegate.h; path = ../MacDwycoVideoSourceDelegate.h; sourceTree = SOURCE_ROOT; };
 		B4E60D8610E16C7100AC10DF /* MacAudioPacket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MacAudioPacket.h; path = ../MacAudioPacket.h; sourceTree = SOURCE_ROOT; };
-		B4E60D8F10E16D8500AC10DF /* vidaq.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vidaq.h; path = "../../depot/linux-dll/ins/dbg/inc/vidaq.h"; sourceTree = SOURCE_ROOT; };
 		B4E60D9210E16DC900AC10DF /* vidskel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = vidskel.h; path = ../vidskel.h; sourceTree = SOURCE_ROOT; };
 		D2AAC07E0554694100DB518D /* libmacdrv.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libmacdrv.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2F7E8BE07B2D77200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -82,7 +80,6 @@
 				B46810A81120DAFC00A2CC69 /* MacDwycoAudioOutput.mm */,
 				B46810A61120DAEB00A2CC69 /* MacAudioOutputBase.mm */,
 				B4E60D9210E16DC900AC10DF /* vidskel.h */,
-				B4E60D8F10E16D8500AC10DF /* vidaq.h */,
 				B4E60D8610E16C7100AC10DF /* MacAudioPacket.h */,
 				B4E60D7410E16C5E00AC10DF /* MacDwyco.h */,
 				B4E60D7510E16C5E00AC10DF /* MacDwyco.mm */,
@@ -98,6 +95,7 @@
 				0867D69AFE84028FC02AAC07 /* External Frameworks and Libraries */,
 				034768DFFF38A50411DB9C8B /* Products */,
 			);
+			comments = "NOTE: you will need to have the cdc32 source code directory to\ncompile these drivers, as they are a part of the core, rather than a\nseparate module (they need headers for some of the internals of the\naudio and video capture.)";
 			name = macdrv;
 			sourceTree = "<group>";
 		};
@@ -156,7 +154,6 @@
 				B4E60D8310E16C5E00AC10DF /* MacDwycoVideoSource.h in Headers */,
 				B4E60D8510E16C5E00AC10DF /* MacDwycoVideoSourceDelegate.h in Headers */,
 				B4E60D8710E16C7100AC10DF /* MacAudioPacket.h in Headers */,
-				B4E60D9010E16D8500AC10DF /* vidaq.h in Headers */,
 				B4E60D9310E16DC900AC10DF /* vidskel.h in Headers */,
 				B46810B01120DB4C00A2CC69 /* MacAudioOutputBase.h in Headers */,
 				B46810B21120DB5600A2CC69 /* MacDwycoAudioOutput.h in Headers */,
@@ -190,7 +187,14 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "macdrv" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
 			mainGroup = 0867D691FE84028FC02AAC07 /* macdrv */;
 			productRefGroup = 034768DFFF38A50411DB9C8B /* Products */;
 			projectDirPath = "";
@@ -223,7 +227,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -234,6 +238,7 @@
 				INSTALL_PATH = /usr/local/lib;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = macdrv;
+				SDKROOT = macosx10.5;
 			};
 			name = Debug;
 		};
@@ -254,16 +259,20 @@
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = "/Users/dwight/depot/linux-dll/bld/cdc32";
+				HEADER_SEARCH_PATHS = (
+					/Users/dwight/depot/dwycore/bld/cdc32/winemu,
+					/Users/dwight/depot/dwycore/bld/cdc32,
+					/Users/dwight/depot/dwycore/ins/dbg/inc,
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.5;
-				USER_HEADER_SEARCH_PATHS = "/Users/dwight/depot/linux-dll/bld/cdc32 /Users/dwight/depot/linux-dll/ins/dbg/inc";
+				SDKROOT = "";
+				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
 		};
