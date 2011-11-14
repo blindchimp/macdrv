@@ -179,6 +179,15 @@ static MacDwyco * singleton_instance = Nil;
 
 @end
 
+#define NVIDSIZES 4
+static int Sizes[NVIDSIZES][2] = {
+    {320, 240},
+    {160, 120},
+    {640, 480},
+    {1280, 720}
+};
+
+
 char **
 DWYCOEXPORT
 mac_vgget_video_devices()
@@ -194,24 +203,24 @@ mac_vgget_video_devices()
 	// we'll pull the same trick here we did with the windows dx9 stuff,
 	// which is to create "devices" with explicit sizes attached to them
 	// and then select the size internally based on the index
-	char ** results = new char * [2 * numDevices + 1];
+	char ** results = new char * [NVIDSIZES * numDevices + 1];
 	
-	for (int index = 0; index < 2 * numDevices; index++)
+	for (int index = 0; index < numDevices; index++)
 	{
-		QTCaptureDevice * device = [devices objectAtIndex:index/2];
-		NSString * deviceIdentifier = [device uniqueID];
-		results[index] = strdup([deviceIdentifier UTF8String]);
-		// ugh
-		char a[500];
-		strcpy(a, results[index]);
-		if(index % 2 == 0)
-			strcat(a, "Large (~320x240)");
-		else
-			strcat(a, "Small (~160x120)");
-		free(results[index]);
-		results[index] = strdup(a);
-	}
-	results[numDevices * 2] = NULL;
+        NSString *a = [NSString stringWithFormat:@"Large (~320x240) Camera #%d",  index + 1];
+        results[index * NVIDSIZES] = strdup([a UTF8String]);
+        
+        a = [NSString stringWithFormat:@"Small (~160x120) Camera #%d",  index + 1];
+        results[index * NVIDSIZES + 1] = strdup([a UTF8String]);
+        
+        a = [NSString stringWithFormat:@"Huge (~640x480) Camera #%d",  index + 1];
+        results[index * NVIDSIZES + 2] = strdup([a UTF8String]);
+        
+        a = [NSString stringWithFormat:@"HD 720 (~1280x720) Camera #%d",  index + 1];
+        results[index * NVIDSIZES + 3] = strdup([a UTF8String]);
+        
+    }
+	results[numDevices * NVIDSIZES] = 0;
     return results;
 }
 
@@ -240,14 +249,12 @@ mac_vgset_video_device(int idx)
 	//[[[MacDwyco singleton] getVideoSourceDelegate] dealloc];
 	//[[MacDwyco singleton] setVideoSourceDelegate: 0];
 	MacDwycoVideoSource *d = [[MacDwycoVideoSource alloc] init];
-	if(idx % 2 == 0)
-		[d setCaptureSize: 320 height:240];
-	else
-		[d setCaptureSize: 160 height:128];
+    [d setCaptureSize:Sizes[idx % NVIDSIZES][0] height:Sizes[idx % NVIDSIZES][1]];
+	
 	[[MacDwyco singleton] setVideoSourceDelegate: d];
 	// client is using expanded indexs, we divide by 2
 	// to get the actual device index
-	[[MacDwyco singleton] setCurrentVideoInputDeviceIndex:(idx / 2)];
+	[[MacDwyco singleton] setCurrentVideoInputDeviceIndex:(idx / NVIDSIZES)];
 	vginit(0, 0);
 	// based on the idx, tell the capture object the size to use
 	
