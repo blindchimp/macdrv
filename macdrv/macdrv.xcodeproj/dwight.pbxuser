@@ -41,7 +41,7 @@
 				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
 				PBXFileTableDataSourceColumnWidthsKey = (
 					20,
-					329,
+					533,
 					20,
 					48,
 					43,
@@ -80,29 +80,27 @@
 					PBXFileDataSource_Warnings_ColumnID,
 				);
 			};
-			PBXPerProjectTemplateStateSaveDate = 340914595;
-			PBXWorkspaceStateSaveDate = 340914595;
+			PBXPerProjectTemplateStateSaveDate = 352166429;
+			PBXWorkspaceStateSaveDate = 352166429;
 		};
 		perUserProjectItems = {
 			B407AB621451D2A4007357AB /* PBXTextBookmark */ = B407AB621451D2A4007357AB /* PBXTextBookmark */;
 			B407AB631451D2A4007357AB /* PBXTextBookmark */ = B407AB631451D2A4007357AB /* PBXTextBookmark */;
 			B407AB641451D2A4007357AB /* PBXTextBookmark */ = B407AB641451D2A4007357AB /* PBXTextBookmark */;
-			B407AB651451D2A4007357AB /* PBXTextBookmark */ = B407AB651451D2A4007357AB /* PBXTextBookmark */;
 			B407AB661451D2A4007357AB /* PBXTextBookmark */ = B407AB661451D2A4007357AB /* PBXTextBookmark */;
 			B407AB671451D2A4007357AB /* PBXTextBookmark */ = B407AB671451D2A4007357AB /* PBXTextBookmark */;
 			B407AB681451D2A4007357AB /* PBXTextBookmark */ = B407AB681451D2A4007357AB /* PBXTextBookmark */;
 			B407AB691451D2A4007357AB /* PBXTextBookmark */ = B407AB691451D2A4007357AB /* PBXTextBookmark */;
 			B407AB6A1451D2A4007357AB /* PBXTextBookmark */ = B407AB6A1451D2A4007357AB /* PBXTextBookmark */;
-			B407AB6B1451D2A4007357AB /* PBXTextBookmark */ = B407AB6B1451D2A4007357AB /* PBXTextBookmark */;
 			B407AB871451D418007357AB /* PBXTextBookmark */ = B407AB871451D418007357AB /* PBXTextBookmark */;
 			B41F649611ECA87200A91CD7 /* PBXTextBookmark */ = B41F649611ECA87200A91CD7 /* PBXTextBookmark */;
-			B421FB7E1451E8B800C3DCB1 /* PBXTextBookmark */ = B421FB7E1451E8B800C3DCB1 /* PBXTextBookmark */;
-			B421FB801451E8B800C3DCB1 /* PBXTextBookmark */ = B421FB801451E8B800C3DCB1 /* PBXTextBookmark */;
-			B421FB811451E8B800C3DCB1 /* PBXTextBookmark */ = B421FB811451E8B800C3DCB1 /* PBXTextBookmark */;
+			B44DB5B714FFCD4A00997EF7 /* PBXTextBookmark */ = B44DB5B714FFCD4A00997EF7 /* PBXTextBookmark */;
+			B44DB5B814FFCD4A00997EF7 /* PBXTextBookmark */ = B44DB5B814FFCD4A00997EF7 /* PBXTextBookmark */;
+			B44DB5B914FFCD4A00997EF7 /* PBXTextBookmark */ = B44DB5B914FFCD4A00997EF7 /* PBXTextBookmark */;
+			B44DB5BA14FFCD4A00997EF7 /* PBXTextBookmark */ = B44DB5BA14FFCD4A00997EF7 /* PBXTextBookmark */;
 			B4B683F311C0207300F8C93F /* PBXTextBookmark */ = B4B683F311C0207300F8C93F /* PBXTextBookmark */;
-			B4D5F318145211BB00C42D70 /* PBXTextBookmark */ = B4D5F318145211BB00C42D70 /* PBXTextBookmark */;
+			B4C3E3C414926CEA00738A52 /* PBXTextBookmark */ = B4C3E3C414926CEA00738A52 /* PBXTextBookmark */;
 			B4D5F31C145211BB00C42D70 /* PBXTextBookmark */ = B4D5F31C145211BB00C42D70 /* PBXTextBookmark */;
-			B4D5F31D145211BB00C42D70 /* PBXTextBookmark */ = B4D5F31D145211BB00C42D70 /* PBXTextBookmark */;
 		};
 		sourceControlManager = B4E60D7110E16C2600AC10DF /* Source Control */;
 		userBuildSettings = {
@@ -144,16 +142,6 @@
 		rType = 0;
 		vrLen = 485;
 		vrLoc = 6295;
-	};
-	B407AB651451D2A4007357AB /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = B46810A81120DAFC00A2CC69 /* MacDwycoAudioOutput.mm */;
-		name = "MacDwycoAudioOutput.mm: 207";
-		rLen = 5;
-		rLoc = 4966;
-		rType = 0;
-		vrLen = 255;
-		vrLoc = 4716;
 	};
 	B407AB661451D2A4007357AB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
@@ -205,16 +193,6 @@
 		vrLen = 832;
 		vrLoc = 7864;
 	};
-	B407AB6B1451D2A4007357AB /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = B4E60D7710E16C5E00AC10DF /* MacDwycoAudioSource.mm */;
-		name = "MacDwycoAudioSource.mm: 345";
-		rLen = 51;
-		rLoc = 8550;
-		rType = 0;
-		vrLen = 593;
-		vrLoc = 8419;
-	};
 	B407AB871451D418007357AB /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = 32DBCF5E0370ADEE00C91783 /* macdrv_Prefix.pch */;
@@ -235,47 +213,45 @@
 		vrLen = 324;
 		vrLoc = 8801;
 	};
-	B421FB7E1451E8B800C3DCB1 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = B421FB7F1451E8B800C3DCB1 /* audmix.h */;
-		name = "audmix.h: 70";
-		rLen = 0;
-		rLoc = 1397;
-		rType = 0;
-		vrLen = 427;
-		vrLoc = 0;
-	};
-	B421FB7F1451E8B800C3DCB1 /* audmix.h */ = {
-		isa = PBXFileReference;
-		lastKnownFileType = sourcecode.c.h;
-		name = audmix.h;
-		path = /Users/dwight/depot/dwycore/bld/cdc32/audmix.h;
-		sourceTree = "<absolute>";
-		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {642, 897}}";
-			sepNavSelRange = "{1397, 0}";
-			sepNavVisRange = "{0, 427}";
-		};
-	};
-	B421FB801451E8B800C3DCB1 /* PBXTextBookmark */ = {
+	B44DB5B714FFCD4A00997EF7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = B46810A81120DAFC00A2CC69 /* MacDwycoAudioOutput.mm */;
 		name = "MacDwycoAudioOutput.mm: 207";
 		rLen = 5;
 		rLoc = 4966;
 		rType = 0;
-		vrLen = 1673;
-		vrLoc = 3298;
+		vrLen = 788;
+		vrLoc = 4183;
 	};
-	B421FB811451E8B800C3DCB1 /* PBXTextBookmark */ = {
+	B44DB5B814FFCD4A00997EF7 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
-		fRef = B4E60D7510E16C5E00AC10DF /* MacDwyco.mm */;
-		name = "MacDwyco.mm: 397";
-		rLen = 31;
-		rLoc = 10048;
+		fRef = B4E60D7610E16C5E00AC10DF /* MacDwycoAudioSource.h */;
+		name = "MacDwycoAudioSource.h: 1";
+		rLen = 0;
+		rLoc = 0;
 		rType = 0;
-		vrLen = 1748;
-		vrLoc = 13045;
+		vrLen = 976;
+		vrLoc = 966;
+	};
+	B44DB5B914FFCD4A00997EF7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B4E60D7710E16C5E00AC10DF /* MacDwycoAudioSource.mm */;
+		name = "MacDwycoAudioSource.mm: 345";
+		rLen = 51;
+		rLoc = 8764;
+		rType = 0;
+		vrLen = 1065;
+		vrLoc = 7947;
+	};
+	B44DB5BA14FFCD4A00997EF7 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B4E60D7710E16C5E00AC10DF /* MacDwycoAudioSource.mm */;
+		name = "MacDwycoAudioSource.mm: 279";
+		rLen = 0;
+		rLoc = 7344;
+		rType = 0;
+		vrLen = 762;
+		vrLoc = 7041;
 	};
 	B46171EC11AD9A2A009ABD48 /* grab_and_code */ = {
 		isa = PBXSymbolicBreakpoint;
@@ -313,9 +289,9 @@
 	};
 	B46810A81120DAFC00A2CC69 /* MacDwycoAudioOutput.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {1286, 2600}}";
+			sepNavIntBoundsRect = "{{0, 0}, {1041, 2600}}";
 			sepNavSelRange = "{4966, 5}";
-			sepNavVisRange = "{3298, 1673}";
+			sepNavVisRange = "{4183, 788}";
 			sepNavWindowFrame = "{{15, 157}, {687, 1016}}";
 		};
 	};
@@ -351,18 +327,19 @@
 		vrLen = 721;
 		vrLoc = 0;
 	};
-	B4D5F318145211BB00C42D70 /* PBXTextBookmark */ = {
+	B4C3E3C414926CEA00738A52 /* PBXTextBookmark */ = {
 		isa = PBXTextBookmark;
 		fRef = B4D5F319145211BB00C42D70 /* audmix.h */;
 		name = "audmix.h: 70";
 		rLen = 0;
 		rLoc = 1397;
 		rType = 0;
-		vrLen = 427;
+		vrLen = 394;
 		vrLoc = 0;
 	};
 	B4D5F319145211BB00C42D70 /* audmix.h */ = {
 		isa = PBXFileReference;
+		lastKnownFileType = sourcecode.c.h;
 		name = audmix.h;
 		path = /Users/dwight/depot/dwycore/bld/cdc32/audmix.h;
 		sourceTree = "<absolute>";
@@ -376,16 +353,6 @@
 		rType = 0;
 		vrLen = 1748;
 		vrLoc = 13045;
-	};
-	B4D5F31D145211BB00C42D70 /* PBXTextBookmark */ = {
-		isa = PBXTextBookmark;
-		fRef = B46810A81120DAFC00A2CC69 /* MacDwycoAudioOutput.mm */;
-		name = "MacDwycoAudioOutput.mm: 207";
-		rLen = 5;
-		rLoc = 4966;
-		rType = 0;
-		vrLen = 1673;
-		vrLoc = 3298;
 	};
 	B4E60D7110E16C2600AC10DF /* Source Control */ = {
 		isa = PBXSourceControlManager;
@@ -410,17 +377,24 @@
 	};
 	B4E60D7510E16C5E00AC10DF /* MacDwyco.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {768, 8502}}";
+			sepNavIntBoundsRect = "{{0, 0}, {768, 8567}}";
 			sepNavSelRange = "{10048, 31}";
-			sepNavVisRange = "{13045, 1748}";
+			sepNavVisRange = "{13011, 1685}";
 			sepNavWindowFrame = "{{486, 121}, {687, 1016}}";
+		};
+	};
+	B4E60D7610E16C5E00AC10DF /* MacDwycoAudioSource.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {711, 1157}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{966, 976}";
 		};
 	};
 	B4E60D7710E16C5E00AC10DF /* MacDwycoAudioSource.mm */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {761, 7046}}";
-			sepNavSelRange = "{8550, 51}";
-			sepNavVisRange = "{8419, 593}";
+			sepNavIntBoundsRect = "{{0, 0}, {711, 7592}}";
+			sepNavSelRange = "{7344, 0}";
+			sepNavVisRange = "{7041, 762}";
 		};
 	};
 	B4E60D7A10E16C5E00AC10DF /* MacDwycoVideoSource.h */ = {

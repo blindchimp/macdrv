@@ -28,6 +28,10 @@ static void local_audioInputCallback(void *                          inUserData,
 				numPacketDescriptions:inNumberPacketDescriptions
 				   packetDescriptions:inPacketDescs];
 	}
+#if 0
+	// note, if this happens, call qstop may cause a problem because
+	// of locking that would need to happen, and this is acalled from another
+	// thread.
 	else
 	{
 		NSLog(@"ERROR - audio queue running but a nil audioSource came into handler; calling AudioQueueStop");
@@ -36,6 +40,7 @@ static void local_audioInputCallback(void *                          inUserData,
 			AudioQueueStop(inAQ, TRUE);
 		}
 	}
+#endif
 }
 
 static void local_audioPropertyListener(void *userData, AudioQueueRef queue, AudioQueuePropertyID propertyID)
@@ -245,6 +250,7 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 	}
 }
 
+// not sure if this is used by the dll
 - (void) pause
 {
 	//NSLog(@"%s", __FUNCTION__);
@@ -253,23 +259,23 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 	{
 		NSLog(@"ERROR: AudioQueueStop returned %ld");
 	}
-	AudioQueueFlush(audioQueue);
-	[self stopAudioFileCapture];
-	[self clearDataPackets];
+	//AudioQueueFlush(audioQueue);
+	//[self stopAudioFileCapture];
+	//[self clearDataPackets];
 	queueRunning = NO;
 }
 
 - (void) off
 {
 	//NSLog(@"%s", __FUNCTION__);
-	OSStatus err = AudioQueueStop(audioQueue, TRUE);
+	OSStatus err = AudioQueuePause(audioQueue);
 	if (err != noErr)
 	{
-		NSLog(@"ERROR: AudioQueueStop returned %ld");
+		NSLog(@"ERROR: AudioQueuePaise returned %ld");
 	}
-	AudioQueueFlush(audioQueue);
+	//AudioQueueFlush(audioQueue);
 	[NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
-	[self stopAudioFileCapture];
+	//[self stopAudioFileCapture];
 	[self clearDataPackets];
 	queueRunning = NO;
 }
@@ -277,13 +283,13 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 - (void) reset
 {
 	//NSLog(@"%s", __FUNCTION__);
-	OSStatus err = AudioQueueReset(audioQueue);
+	OSStatus err = AudioQueueStop(audioQueue, TRUE);
 	if (err != noErr)
 	{
 		NSLog(@"AudioQueueReset returned %ld", err);
 	}
 	//[self stopAudioFileCapture];
-	//[self clearDataPackets];
+	[self clearDataPackets];
 }
 
 - (MacAudioPacket) popLatestAudioPacket
