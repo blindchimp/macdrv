@@ -237,7 +237,7 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 		OSStatus err = AudioQueueStart(audioQueue, NULL);
 		if (err != noErr)
 		{
-			NSLog(@"ERROR: AudioQueueStart returned %ld");
+			NSLog(@"ERROR: AudioQueueStart returned %ld", err);
 		}
 		else
 		{
@@ -257,7 +257,7 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 	OSStatus err = AudioQueuePause(audioQueue);
 	if (err != noErr)
 	{
-		NSLog(@"ERROR: AudioQueueStop returned %ld");
+		NSLog(@"ERROR: AudioQueueStop returned %ld", err);
 	}
 	//AudioQueueFlush(audioQueue);
 	//[self stopAudioFileCapture];
@@ -271,7 +271,7 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 	OSStatus err = AudioQueuePause(audioQueue);
 	if (err != noErr)
 	{
-		NSLog(@"ERROR: AudioQueuePaise returned %ld");
+		NSLog(@"ERROR: AudioQueuePaise returned %ld", err);
 	}
 	//AudioQueueFlush(audioQueue);
 	[NSThread sleepUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
