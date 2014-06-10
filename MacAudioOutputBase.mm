@@ -45,7 +45,7 @@ static void MacAudioOutputBaseCallback(void * inUserData,
 				err = AudioQueueAllocateBuffer(audioQueue , sizeof(short) * kMaxFramesPerBuffer, &buffer);
 				if (err != noErr)
 				{
-					NSLog(@"AudioQueueAllocateBuffer returned %ld", err);
+					NSLog(@"AudioQueueAllocateBuffer returned %d", (int)err);
 				}
 				else 
 				{
@@ -56,7 +56,7 @@ static void MacAudioOutputBaseCallback(void * inUserData,
 					err = AudioQueueEnqueueBuffer(audioQueue, buffer, 0, NULL);
 					if (err != noErr)
 					{
-						NSLog(@"AudioQueueEnqueueBuffer returned %ld", err);
+						NSLog(@"AudioQueueEnqueueBuffer returned %d", (int)err);
 					}
 					
 				}
@@ -66,13 +66,13 @@ static void MacAudioOutputBaseCallback(void * inUserData,
 			{
 				err = AudioQueueSetParameter(audioQueue, kAudioQueueParam_Volume, 1.0f);
 				if (err != noErr)
-					NSLog(@"AudioQueueSetParameter returned %ld", err);
+					NSLog(@"AudioQueueSetParameter returned %d", (int)err);
 			}
 			
 		}
 		else
 		{
-			NSLog(@"AudioQueueNewOutput returned %ld", err);
+			NSLog(@"AudioQueueNewOutput returned %d", (int)err);
 		}
 	}
 	return self;
@@ -86,7 +86,7 @@ static void MacAudioOutputBaseCallback(void * inUserData,
 		OSStatus status = AudioQueueDispose(audioQueue, YES);
 		if (status != 0)
 		{
-			NSLog(@"AudioQueueDispose error: %ld", status);
+			NSLog(@"AudioQueueDispose error: %d", (int)status);
 		}
 	}
 	[super dealloc];
@@ -110,7 +110,7 @@ static void MacAudioOutputBaseCallback(void * inUserData,
 	OSStatus err = AudioQueueStart(audioQueue, NULL);
 	if (err != noErr)
 	{
-		NSLog(@"ERROR - AudioQueueStart returned %ld", err);
+		NSLog(@"ERROR - AudioQueueStart returned %d", (int)err);
 	}
 	else
 	{

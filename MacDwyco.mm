@@ -197,7 +197,7 @@ mac_vgget_video_devices()
     // all devices.
 	
 	NSArray * devices = [[MacDwyco singleton] getVideoInputDevices:TRUE];
-	NSLog(@"got %d video or muxed devices:\n %@", [devices count], devices);
+	NSLog(@"got %lu video or muxed devices:\n %@", (unsigned long)[devices count], devices);
 	
 	int numDevices = [devices count];
 	// we'll pull the same trick here we did with the windows dx9 stuff,
