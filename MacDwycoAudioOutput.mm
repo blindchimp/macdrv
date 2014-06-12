@@ -169,7 +169,7 @@ static MacDwycoAudioOutput * sharedAudioOutput = nil;
 			OSStatus err = AudioQueueEnqueueBuffer(inAQ, inCompleteAQBuffer, 0, NULL);
 			if (err != noErr)
 			{
-				NSLog(@"ERROR - AudioQueueEnqueueBuffer returned %ld", err);
+				NSLog(@"ERROR - AudioQueueEnqueueBuffer returned %d", (int)err);
 			}
 			audioDataQueue->pop_front();
 		}
@@ -182,7 +182,7 @@ static MacDwycoAudioOutput * sharedAudioOutput = nil;
 			OSStatus err = AudioQueueEnqueueBuffer(inAQ, inCompleteAQBuffer, 0, NULL);
 			if (err != noErr)
 			{
-				NSLog(@"ERROR - AudioQueueEnqueueBuffer returned %ld", err);
+				NSLog(@"ERROR - AudioQueueEnqueueBuffer returned %d", (int)err);
 			}
 		}
 	}
