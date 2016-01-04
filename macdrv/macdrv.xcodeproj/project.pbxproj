@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -186,10 +186,10 @@
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 			};
 			buildConfigurationList = 1DEB922208733DC00010E9CD /* Build configuration list for PBXProject "macdrv" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -238,10 +238,16 @@
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = macdrv_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					/Users/dwight/depot/dwycore/bld/cdc32/winemu,
+					/Users/dwight/depot/dwycore/bld/dwcls,
+					/Users/dwight/depot/dwycore/bld/cdc32,
+					/Users/dwight/depot/dwycore/ins/dbg/inc,
+				);
 				INSTALL_PATH = /Users/dwight/out;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = macdrv;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.11;
 			};
 			name = Debug;
 		};
@@ -255,7 +261,7 @@
 				GCC_PREFIX_HEADER = macdrv_Prefix.pch;
 				INSTALL_PATH = /Users/dwight/out;
 				PRODUCT_NAME = macdrv;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.11;
 			};
 			name = Release;
 		};
@@ -275,7 +281,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				ONLY_ACTIVE_ARCH = YES;
 				PREBINDING = NO;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.11;
 				USER_HEADER_SEARCH_PATHS = "";
 			};
 			name = Debug;
@@ -288,7 +294,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PREBINDING = NO;
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx10.11;
 			};
 			name = Release;
 		};
