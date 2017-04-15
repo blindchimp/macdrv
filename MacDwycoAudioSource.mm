@@ -128,6 +128,7 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 	return self;
 }
 
+#if 0
 - (NSString *) description
 {
 	// Return a string representation of this object's state, for debugging / logging
@@ -135,6 +136,7 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 	
 	return [NSString stringWithUTF8String:ss.str().c_str()];
 }
+#endif
 
 - (void) dealloc
 {

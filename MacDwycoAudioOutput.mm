@@ -1,6 +1,7 @@
 #import "MacDwycoAudioOutput.h"
 
 #include <vector>
+#include <deque>
 
 #include "skelaudout.h"
 //#include "dlli.h"
