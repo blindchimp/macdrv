@@ -1,11 +1,3 @@
-/*
-; The contents of this file are Copyright (C) 1995-2009 Dwyco, Inc.
-; This file contains proprietary and confidential
-; information that is the property of Dwyco, Inc.
-; Use or disclosure of this file is 
-; strictly prohibited without express written permission
-; from Dwyco, Inc.
-*/
 #ifndef VGEXP_H
 #define VGEXP_H
 

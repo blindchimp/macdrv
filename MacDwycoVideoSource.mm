@@ -3,7 +3,6 @@
 //  DwycoVideoTest
 //
 //  Created by Christopher Corbell on 8/26/09.
-//  Copyright 2009 Dwyco Inc. All rights reserved.
 //
 
 #import "MacDwycoVideoSource.h"

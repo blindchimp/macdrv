@@ -2,8 +2,6 @@
  *  MacDwycoVideoSourceDelegate.h
  *  DwycoVideoTest
  *
- *  Copyright 2009 Dwyco, Inc. All rights reserved.
- *
  */
 
 /**

@@ -3,7 +3,6 @@
  *  DwycoVideoTest
  *
  *  Created by Christopher Corbell on 11/15/09.
- *  Copyright 2009 Dwyco Inc.. All rights reserved.
  *
  */
 
