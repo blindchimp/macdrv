@@ -83,15 +83,15 @@ init_mac_drivers()
                 mac_vgpass,
                 mac_vgstop,
                 mac_vgget_data,
-                mac_vgfree_data
-mac_vgget_video_devices,
-mac_vgfree_video_devices,
-mac_vgset_video_device,
-mac_vgstop_video_device,
-mac_vgshow_source_dialog,
-mac_vgpreview_on,
-mac_vgpreview_off,
-mac_vgset_app_data
+                mac_vgfree_data,
+                mac_vgget_video_devices,
+                mac_vgfree_video_devices,
+                mac_vgset_video_device,
+                mac_vgstop_video_device,
+                mac_vgshow_source_dialog,
+                mac_vgpreview_on,
+                mac_vgpreview_off,
+                mac_vgset_app_data
                 );
 
 
