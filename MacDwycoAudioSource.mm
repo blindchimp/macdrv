@@ -52,7 +52,7 @@ static void local_audioPropertyListener(void *userData, AudioQueueRef queue, Aud
 		//aqr->queueStartStopTime = CFAbsoluteTimeGetCurrent();
 	}
 }
-
+#if 0
 static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath, 
 												  const char * wavFilePath,
 												  UInt32 dataLength)
@@ -92,6 +92,8 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 	// delete the temp file
 	[[NSFileManager defaultManager] removeFileAtPath:[NSString stringWithUTF8String:tempFilePath] handler:nil];
 }
+#endif
+
 
 @implementation MacDwycoAudioSource
 
@@ -397,6 +399,7 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 	}
 }
 
+#if 0
 - (void) stopAudioFileCapture
 {
 	//NSLog(@"%s", __FUNCTION__);
@@ -432,6 +435,7 @@ static void local_convertRawMono16bitPcmFileToWav(const char * tempFilePath,
 		}
 	}
 }
+#endif
 
 
 - (void) handleAudioInput:(AudioQueueRef) inAQ

@@ -11,7 +11,7 @@
 - (id) init;
 - (void) dealloc;
 
-+ (void) initializeDwycoCallbacks;
+//+ (void) initializeDwycoCallbacks;
 
 + (MacDwycoAudioOutput *) getSharedOutput; // singleton accessor/allocator
 + (void) releaseSharedOutput; // singleton destroyer

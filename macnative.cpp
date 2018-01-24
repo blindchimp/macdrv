@@ -91,7 +91,7 @@ init_mac_drivers()
                 mac_vgshow_source_dialog,
                 mac_vgpreview_on,
                 mac_vgpreview_off,
-                mac_vgset_app_data
+                mac_vg_set_appdata
                 );
 
 

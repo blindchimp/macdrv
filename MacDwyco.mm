@@ -11,7 +11,7 @@
 #include <stdlib.h>
 //#include "ppm.h"
 #include "vidaq.h"
-#include "vidskel.h"
+//#include "vidskel.h"
 //#include "dlli.h"
 
 // Callback declarations:
@@ -234,7 +234,7 @@ void
 DWYCOEXPORT
 mac_vgset_video_device(int idx)
 { 
-	vgstop_video_device();
+	mac_vgstop_video_device();
 	//[[[MacDwyco singleton] getVideoSourceDelegate] dealloc];
 	//[[MacDwyco singleton] setVideoSourceDelegate: 0];
 	MacDwycoVideoSource *d = [[MacDwycoVideoSource alloc] init];
@@ -244,7 +244,7 @@ mac_vgset_video_device(int idx)
 	// client is using expanded indexs, we divide by 2
 	// to get the actual device index
 	[[MacDwyco singleton] setCurrentVideoInputDeviceIndex:(idx / NVIDSIZES)];
-	vginit(0, 0);
+	mac_vginit(0, 0);
 	// based on the idx, tell the capture object the size to use
 	
 
@@ -255,8 +255,8 @@ void
 DWYCOEXPORT
 mac_vgstop_video_device()
 {
-	vgstop(0);
-	vgpass(0);
+	mac_vgstop(0);
+	mac_vgpass(0);
 	[[[MacDwyco singleton] getVideoSourceDelegate] stopCapture];
 	[[[MacDwyco singleton] getVideoSourceDelegate] dealloc];
 	[[MacDwyco singleton] setVideoSourceDelegate: 0];
@@ -294,8 +294,8 @@ DWYCOEXPORT
 mac_vgdel(void *aqext)
 {
 	//fprintf(stderr, "vgdel\n");
-	vgstop(0);
-	vgpass(0);
+	mac_vgstop(0);
+	mac_vgpass(0);
 	// ok, we don't necessarily want to stop capturing in this case
 #if 0
 	[[[MacDwyco singleton] getVideoSourceDelegate] dealloc];

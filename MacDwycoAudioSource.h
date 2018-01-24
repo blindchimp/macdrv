@@ -65,9 +65,9 @@
 - (void)		setMeteringEnabled:(BOOL) bYesNo;
 - (float)		getMeterAveragePower;
 
-- (void)		setAudioCaptureFile:(NSString *) filePath;
-- (void)		startAudioFileCapture;
-- (void)		stopAudioFileCapture;
+//- (void)		setAudioCaptureFile:(NSString *) filePath;
+//- (void)		startAudioFileCapture;
+//- (void)		stopAudioFileCapture;
 
 // Callback to process audio input
 - (void) handleAudioInput:(AudioQueueRef) inAQ
