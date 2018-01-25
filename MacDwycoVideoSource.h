@@ -1,7 +1,7 @@
 
 /* ===
 ; Copyright (c) 1995-present, Dwyco, Inc.
-; 
+;
 ; This Source Code Form is subject to the terms of the Mozilla Public
 ; License, v. 2.0. If a copy of the MPL was not distributed with this file,
 ; You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -27,7 +27,7 @@
  *
  * <p>A design assumption of this class is that dropped frames may be ignored
  * if the video device is capturing frames faster than the application needs them.
- * 
+ *
  * <p><b>Thread Safety:</b></p>
  *
  * <p>This class is implemented with optional thread safety around the last
@@ -46,29 +46,29 @@
  *
  */
 @interface MacDwycoVideoSource : NSObject<MacDwycoVideoSourceDelegate> {
-	QTCaptureSession * captureSession;
-	QTCaptureDevice * captureDevice;
-	QTCaptureDeviceInput * captureDeviceInput;
-	
-	// One or the other of these may be used; generally
-	// there's no need to use both?:
-	QTCaptureDecompressedVideoOutput * decompressedVideoOutput;
-	QTCaptureVideoPreviewOutput * videoPreviewOutput;
-	
-	CIFilter * colorFilter;
-	CIFilter * gammaFilter;
-	
-	BOOL flipImageVertically;
-	int minimumFrameRate;
-	
-	CVImageBufferRef lastCapturedImageBuffer;
-	QTTime lastSampleTime; // set by QTCapture callback
-	QTTime lastCaptureTime; // copied from above when frame is 
-							// obtained by dwyco (won't change til 
-							// next time getLastCapturedImageAsBitmap is called)
-	NSObject * lastCapturedImageBufferMutex;
-	int capWidth;
-	int capHeight;
+    QTCaptureSession * captureSession;
+    QTCaptureDevice * captureDevice;
+    QTCaptureDeviceInput * captureDeviceInput;
+
+    // One or the other of these may be used; generally
+    // there's no need to use both?:
+    QTCaptureDecompressedVideoOutput * decompressedVideoOutput;
+    QTCaptureVideoPreviewOutput * videoPreviewOutput;
+
+    CIFilter * colorFilter;
+    CIFilter * gammaFilter;
+
+    BOOL flipImageVertically;
+    int minimumFrameRate;
+
+    CVImageBufferRef lastCapturedImageBuffer;
+    QTTime lastSampleTime; // set by QTCapture callback
+    QTTime lastCaptureTime; // copied from above when frame is
+    // obtained by dwyco (won't change til
+    // next time getLastCapturedImageAsBitmap is called)
+    NSObject * lastCapturedImageBufferMutex;
+    int capWidth;
+    int capHeight;
 }
 - (id) init;
 - (id) initWithCaptureDeviceId:(NSString *) captureDeviceId;

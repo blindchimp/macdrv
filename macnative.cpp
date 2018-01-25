@@ -1,7 +1,7 @@
 
 /* ===
 ; Copyright (c) 1995-present, Dwyco, Inc.
-; 
+;
 ; This Source Code Form is subject to the terms of the Mozilla Public
 ; License, v. 2.0. If a copy of the MPL was not distributed with this file,
 ; You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -54,53 +54,53 @@ void
 init_mac_drivers()
 {
     dwyco_set_external_audio_capture_callbacks(
-                mac_audio_new,
-                mac_audio_delete,
-                mac_audio_init,
-                mac_audio_has_data,
-                mac_audio_need,
-                mac_audio_pass,
-                mac_audio_stop,
-                mac_audio_on,
-                mac_audio_off,
-                mac_audio_reset,
-                mac_audio_status,
-                mac_audio_get_data);
+        mac_audio_new,
+        mac_audio_delete,
+        mac_audio_init,
+        mac_audio_has_data,
+        mac_audio_need,
+        mac_audio_pass,
+        mac_audio_stop,
+        mac_audio_on,
+        mac_audio_off,
+        mac_audio_reset,
+        mac_audio_status,
+        mac_audio_get_data);
 
     dwyco_set_external_audio_output_callbacks(
-                skel_audout_new,
-                skel_audout_delete,
-                skel_audout_init,
-                skel_audout_device_output,
-                skel_audout_device_done,
-                skel_audout_device_stop,
-                skel_audout_device_reset,
-                skel_audout_device_status,
-                skel_audout_device_close,
-                skel_audout_device_buffer_time,
-                skel_audout_device_play_silence,
-                skel_audout_device_bufs_playing
-                );
+        skel_audout_new,
+        skel_audout_delete,
+        skel_audout_init,
+        skel_audout_device_output,
+        skel_audout_device_done,
+        skel_audout_device_stop,
+        skel_audout_device_reset,
+        skel_audout_device_status,
+        skel_audout_device_close,
+        skel_audout_device_buffer_time,
+        skel_audout_device_play_silence,
+        skel_audout_device_bufs_playing
+    );
 
     dwyco_set_external_video_capture_callbacks(
-                mac_vgnew,
-                mac_vgdel,
-                mac_vginit,
-                mac_vghas_data,
-                mac_vgneed,
-                mac_vgpass,
-                mac_vgstop,
-                mac_vgget_data,
-                mac_vgfree_data,
-                mac_vgget_video_devices,
-                mac_vgfree_video_devices,
-                mac_vgset_video_device,
-                mac_vgstop_video_device,
-                mac_vgshow_source_dialog,
-                mac_vgpreview_on,
-                mac_vgpreview_off,
-                mac_vg_set_appdata
-                );
+        mac_vgnew,
+        mac_vgdel,
+        mac_vginit,
+        mac_vghas_data,
+        mac_vgneed,
+        mac_vgpass,
+        mac_vgstop,
+        mac_vgget_data,
+        mac_vgfree_data,
+        mac_vgget_video_devices,
+        mac_vgfree_video_devices,
+        mac_vgset_video_device,
+        mac_vgstop_video_device,
+        mac_vgshow_source_dialog,
+        mac_vgpreview_on,
+        mac_vgpreview_off,
+        mac_vg_set_appdata
+    );
 
 
 }

@@ -1,7 +1,7 @@
 
 /* ===
 ; Copyright (c) 1995-present, Dwyco, Inc.
-; 
+;
 ; This Source Code Form is subject to the terms of the Mozilla Public
 ; License, v. 2.0. If a copy of the MPL was not distributed with this file,
 ; You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -23,25 +23,25 @@
 
 @interface MacDwycoAudioSource : NSObject {
 
-	AudioQueueRef					audioQueue;
-	AudioStreamBasicDescription		audioStreamDesc;
-	
-	int								packetSize;
-	
-	std::deque<MacAudioPacket> *	audioDataPackets;
-	MacAudioPacket *				partialPacket;
-	
-	NSObject *						audioDataMutex;
-	
-	BOOL							meteringEnabled;
-	AudioQueueLevelMeterState		meterState;
-	
-	BOOL							capturingFile;
-	NSString *						audioCaptureFilePath;	
-	FILE *							captureFP;
-	UInt32							captureFileByteCount;
-	
-	BOOL							queueRunning;
+    AudioQueueRef					audioQueue;
+    AudioStreamBasicDescription		audioStreamDesc;
+
+    int								packetSize;
+
+    std::deque<MacAudioPacket> *	audioDataPackets;
+    MacAudioPacket *				partialPacket;
+
+    NSObject *						audioDataMutex;
+
+    BOOL							meteringEnabled;
+    AudioQueueLevelMeterState		meterState;
+
+    BOOL							capturingFile;
+    NSString *						audioCaptureFilePath;
+    FILE *							captureFP;
+    UInt32							captureFileByteCount;
+
+    BOOL							queueRunning;
 }
 // TODO: add support for enumerating audio input devices and initializing with
 // a device other than the default input device, with kAudioQueueProperty_CurrentDevice
@@ -79,10 +79,10 @@
 
 // Callback to process audio input
 - (void) handleAudioInput:(AudioQueueRef) inAQ
-				   buffer:(AudioQueueBufferRef) inBuffer
-					 time:(const AudioTimeStamp *) inStartTime
-	numPacketDescriptions:(UInt32) inNumberPacketDescriptions
-	   packetDescriptions:(const AudioStreamPacketDescription *) inPacketDescs;
+    buffer:(AudioQueueBufferRef) inBuffer
+    time:(const AudioTimeStamp *) inStartTime
+    numPacketDescriptions:(UInt32) inNumberPacketDescriptions
+    packetDescriptions:(const AudioStreamPacketDescription *) inPacketDescs;
 
 /**
  * Delete any unretrieved data packets in the queue, as well as

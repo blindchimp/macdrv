@@ -1,7 +1,7 @@
 
 /* ===
 ; Copyright (c) 1995-present, Dwyco, Inc.
-; 
+;
 ; This Source Code Form is subject to the terms of the Mozilla Public
 ; License, v. 2.0. If a copy of the MPL was not distributed with this file,
 ; You can obtain one at https://mozilla.org/MPL/2.0/.
@@ -17,14 +17,14 @@
 @class MacDwycoVideoSource;
 
 @interface MacDwycoCameraSettingsController : NSObject {
-	IBOutlet NSPanel *		cameraSettingsPanel;
-	IBOutlet NSSlider *		brightnessSlider;
-	IBOutlet NSSlider *		contrastSlider;
-	IBOutlet NSSlider *		saturationSlider;
-	IBOutlet NSSlider *		gammaSlider;
-	IBOutlet NSButton *     flipImageVerticallyCheckbox;
-	
-	MacDwycoVideoSource * videoSource;
+    IBOutlet NSPanel *		cameraSettingsPanel;
+    IBOutlet NSSlider *		brightnessSlider;
+    IBOutlet NSSlider *		contrastSlider;
+    IBOutlet NSSlider *		saturationSlider;
+    IBOutlet NSSlider *		gammaSlider;
+    IBOutlet NSButton *     flipImageVerticallyCheckbox;
+
+    MacDwycoVideoSource * videoSource;
 }
 + (void) showPanelForSource:(MacDwycoVideoSource *) source;
 + (void) releaseSharedController;
